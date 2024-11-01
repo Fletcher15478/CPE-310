@@ -1,3 +1,7 @@
+/*
+Author: Gabe Turak
+Group Gabe Turak, John Ferrell, Chad Wangolo, Fletcher Hartsock
+*/
 #include "Instruction.h"
 
 void addi_immd_assm(void) {
