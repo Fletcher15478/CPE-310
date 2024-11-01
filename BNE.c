@@ -1,6 +1,9 @@
+/*
+Author: Fletcher Hartsock
+Group Gabe Turak, John Ferrell, Chad Wangolo
+*/
 #include "Instruction.h"
 
-// BNE Assembly to Machine Code Encoding
 void bne_immd_assm(void) {
     // Checking that the opcode matches
     if (strcmp(OP_CODE, "BNE") != 0) {
@@ -50,7 +53,7 @@ void bne_immd_assm(void) {
         Putting the binary together
     */
 
-    // Set the opcode for BNE (5 in binary is `000101`)
+    // Set the opcode for BNE 5 in binary is 000101
     setBits_num(31, 5, 6);
 
     // Set Rs
@@ -66,9 +69,8 @@ void bne_immd_assm(void) {
     state = COMPLETE_ENCODE;
 }
 
-// BNE Machine Code to Assembly Decoding
 void bne_immd_bin(void) {
-    // Check if the opcode bits match for BNE (`000101`)
+    // Check if the opcode bits match for BNE 000101
     if (checkBits(31, "000101") != 0) {
         state = WRONG_COMMAND;
         return;

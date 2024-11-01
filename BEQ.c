@@ -1,3 +1,7 @@
+/*
+Author: Fletcher Hartsock
+Group Gabe Turak, John Ferrell, Chad Wangolo
+*/
 #include "Instruction.h"
 
 void beq_immd_assm(void) {
@@ -55,7 +59,7 @@ void beq_immd_assm(void) {
 		Putting the binary together
 	*/
 
-	// Set the opcode for BEQ (4 in binary is `000100`)
+	// Set the opcode for BEQ 4 in binary is 000100
 	setBits_str(31, "000100");
 
 	// Set Rs
@@ -72,7 +76,7 @@ void beq_immd_assm(void) {
 }
 
 void beq_immd_bin(void) {
-	// Check if the opcode bits match for BEQ (`000100`)
+	// Check if the opcode bits match for BEQ 000100
 	if (checkBits(31, "000100") != 0) {
 		state = WRONG_COMMAND;
 		return;
@@ -81,7 +85,7 @@ void beq_immd_bin(void) {
 	/*
 		Finding values in the binary
 	*/
-	// getBits(start_bit, width)
+	
 	uint32_t Rs = getBits(25, 5);
 	uint32_t Rt = getBits(20, 5);
 	int16_t Imm = (int16_t)getBits(15, 16); // Cast to signed 16-bit for immediate

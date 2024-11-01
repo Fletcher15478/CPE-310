@@ -1,6 +1,10 @@
+/*
+Author: Fletcher Hartsock
+Group Gabe Turak, John Ferrell, Chad Wangolo
+*/
 #include "Instruction.h"
 
-// SW Assembly to Machine Code Encoding
+
 void sw_immd_assm(void) {
     // Checking that the opcode matches
     if (strcmp(OP_CODE, "SW") != 0) {
@@ -50,7 +54,7 @@ void sw_immd_assm(void) {
         Putting the binary together
     */
 
-    // Set the opcode for SW (43 in decimal, `101011` in binary)
+    // Set the opcode for SW 101011
     setBits_num(31, 43, 6);
 
     // Set Base register
@@ -66,9 +70,8 @@ void sw_immd_assm(void) {
     state = COMPLETE_ENCODE;
 }
 
-// SW Machine Code to Assembly Decoding
 void sw_immd_bin(void) {
-    // Check if the opcode bits match for SW (`101011`)
+    // Check if the opcode bits match for SW 101011
     if (checkBits(31, "101011") != 0) {
         state = WRONG_COMMAND;
         return;

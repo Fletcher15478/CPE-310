@@ -1,3 +1,7 @@
+/*
+Author: Fletcher Hartsock
+Group Gabe Turak, John Ferrell, Chad Wangolo
+*/
 #include "Instruction.h"
 
 void sub_reg_assm(void) {
