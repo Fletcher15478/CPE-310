@@ -1,6 +1,6 @@
 /*
 Author: Fletcher Hartsock
-Group Gabe Turak, John Ferrell, Chad Wangolo
+Group Gabe Turak, John Ferrell, Chad Wangolo, Fletcher Hartsock
 */
 #include "Instruction.h"
 
