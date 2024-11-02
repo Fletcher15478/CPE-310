@@ -1,4 +1,5 @@
 #include "Instruction.h"
+// Edited by Chad Wangolo
 
 void mfhi_reg_assm(void) {
 // Checking that the op code matches
